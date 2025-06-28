@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: ["https://chatty-e9u4.onrender.com", "http://localhost:5173"],
   },
 });
 

@@ -22,6 +22,13 @@ app.use(express.json());
 
 app.use(cookieParser());
 
+app.use(
+  cors({
+    origin: ["https://chatty-e9u4.onrender.com", "http://localhost:5173"],
+    credentials: true,
+  })
+);
+
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
